@@ -1,0 +1,311 @@
+fileFormatVersion: 2
+guid: 2380d013ccfa89244874fedf4ab40427
+timeCreated: 1502803112
+licenseType: Free
+ModelImporter:
+  serializedVersion: 21
+  fileIDToRecycleName:
+    100000: arm left elbow
+    100002: arm left finger 04 01
+    100004: arm left finger 04 02
+    100006: arm left finger 04 03
+    100008: arm left finger 05 01
+    100010: arm left finger 05 02
+    100012: arm left finger 05 03
+    100014: arm left finger index 01
+    100016: arm left finger index 02
+    100018: arm left finger index 03
+    100020: arm left finger middle 01
+    100022: arm left finger middle 02
+    100024: arm left finger middle 03
+    100026: arm left finger thumb 01
+    100028: arm left finger thumb 02
+    100030: arm left finger thumb 03
+    100032: arm left hand
+    100034: arm left shoulder 01
+    100036: arm left shoulder 02
+    100038: arm left wrist plate
+    100040: arm right elbow
+    100042: arm right finger 04 01
+    100044: arm right finger 04 02
+    100046: arm right finger 04 03
+    100048: arm right finger 05 01
+    100050: arm right finger 05 02
+    100052: arm right finger 05 03
+    100054: arm right finger index 01
+    100056: arm right finger index 02
+    100058: arm right finger index 03
+    100060: arm right finger middle 01
+    100062: arm right finger middle 02
+    100064: arm right finger middle 03
+    100066: arm right finger thumb 01
+    100068: arm right finger thumb 02
+    100070: arm right finger thumb 03
+    100072: arm right hand
+    100074: arm right shoulder 01
+    100076: arm right shoulder 02
+    100078: arm right wrist plate
+    100080: //RootNode
+    100082: head neck lower
+    100084: head neck upper
+    100086: head scarf 01
+    100088: head scarf 02
+    100090: head scarf 03
+    100092: head scarf 04
+    100094: head scarf 05
+    100096: Katana
+    100098: leg left foot
+    100100: leg left knee
+    100102: leg left thigh
+    100104: leg left toes
+    100106: leg right foot
+    100108: leg right knee
+    100110: leg right thigh
+    100112: leg right toes
+    100114: Object001
+    100116: Object002
+    100118: Object003
+    100120: Object004
+    100122: Object005
+    100124: Object006
+    100126: Object007
+    100128: Object008
+    100130: Object009
+    100132: Object010
+    100134: Object011
+    100136: Object012
+    100138: root ground
+    100140: shurikens
+    100142: spine higher
+    100144: spine lower
+    100146: spine lowest
+    100148: spine middle
+    100150: spine upper
+    100152: unused
+    100154: unused item_Katana
+    100156: unused item_Silver
+    100158: unused item_Tanto
+    100160: unused.001
+    100162: unused.001 item_Katana
+    100164: unused.001 item_Silver
+    100166: unused.001 item_Tanto
+    100168: unused.002
+    100170: unused.002 item_Katana
+    100172: unused.002 item_Silver
+    100174: unused.002 item_Tanto
+    100176: unused.003
+    100178: unused.003 item_Katana
+    100180: unused.003 item_Silver
+    100182: unused.003 item_Tanto
+    100184: unused.004
+    100186: unused.004 item_Katana
+    100188: unused.004 item_Silver
+    100190: unused.004 item_Tanto
+    100192: unused.005
+    100194: unused.005 item_Katana
+    100196: unused.005 item_Silver
+    100198: unused.005 item_Tanto
+    100200: unused.006
+    100202: unused.007
+    400000: arm left elbow
+    400002: arm left finger 04 01
+    400004: arm left finger 04 02
+    400006: arm left finger 04 03
+    400008: arm left finger 05 01
+    400010: arm left finger 05 02
+    400012: arm left finger 05 03
+    400014: arm left finger index 01
+    400016: arm left finger index 02
+    400018: arm left finger index 03
+    400020: arm left finger middle 01
+    400022: arm left finger middle 02
+    400024: arm left finger middle 03
+    400026: arm left finger thumb 01
+    400028: arm left finger thumb 02
+    400030: arm left finger thumb 03
+    400032: arm left hand
+    400034: arm left shoulder 01
+    400036: arm left shoulder 02
+    400038: arm left wrist plate
+    400040: arm right elbow
+    400042: arm right finger 04 01
+    400044: arm right finger 04 02
+    400046: arm right finger 04 03
+    400048: arm right finger 05 01
+    400050: arm right finger 05 02
+    400052: arm right finger 05 03
+    400054: arm right finger index 01
+    400056: arm right finger index 02
+    400058: arm right finger index 03
+    400060: arm right finger middle 01
+    400062: arm right finger middle 02
+    400064: arm right finger middle 03
+    400066: arm right finger thumb 01
+    400068: arm right finger thumb 02
+    400070: arm right finger thumb 03
+    400072: arm right hand
+    400074: arm right shoulder 01
+    400076: arm right shoulder 02
+    400078: arm right wrist plate
+    400080: //RootNode
+    400082: head neck lower
+    400084: head neck upper
+    400086: head scarf 01
+    400088: head scarf 02
+    400090: head scarf 03
+    400092: head scarf 04
+    400094: head scarf 05
+    400096: Katana
+    400098: leg left foot
+    400100: leg left knee
+    400102: leg left thigh
+    400104: leg left toes
+    400106: leg right foot
+    400108: leg right knee
+    400110: leg right thigh
+    400112: leg right toes
+    400114: Object001
+    400116: Object002
+    400118: Object003
+    400120: Object004
+    400122: Object005
+    400124: Object006
+    400126: Object007
+    400128: Object008
+    400130: Object009
+    400132: Object010
+    400134: Object011
+    400136: Object012
+    400138: root ground
+    400140: shurikens
+    400142: spine higher
+    400144: spine lower
+    400146: spine lowest
+    400148: spine middle
+    400150: spine upper
+    400152: unused
+    400154: unused item_Katana
+    400156: unused item_Silver
+    400158: unused item_Tanto
+    400160: unused.001
+    400162: unused.001 item_Katana
+    400164: unused.001 item_Silver
+    400166: unused.001 item_Tanto
+    400168: unused.002
+    400170: unused.002 item_Katana
+    400172: unused.002 item_Silver
+    400174: unused.002 item_Tanto
+    400176: unused.003
+    400178: unused.003 item_Katana
+    400180: unused.003 item_Silver
+    400182: unused.003 item_Tanto
+    400184: unused.004
+    400186: unused.004 item_Katana
+    400188: unused.004 item_Silver
+    400190: unused.004 item_Tanto
+    400192: unused.005
+    400194: unused.005 item_Katana
+    400196: unused.005 item_Silver
+    400198: unused.005 item_Tanto
+    400200: unused.006
+    400202: unused.007
+    4300000: Object001
+    4300002: Object002
+    4300004: Object003
+    4300006: Object004
+    4300008: Object005
+    4300010: Object006
+    4300012: Object007
+    4300014: Object008
+    4300016: Object009
+    4300018: Object010
+    4300020: Object011
+    4300022: Object012
+    9500000: //RootNode
+    13700000: Object001
+    13700002: Object002
+    13700004: Object003
+    13700006: Object004
+    13700008: Object005
+    13700010: Object006
+    13700012: Object007
+    13700014: Object008
+    13700016: Object009
+    13700018: Object010
+    13700020: Object011
+    13700022: Object012
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
