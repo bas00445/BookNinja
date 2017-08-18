@@ -19,7 +19,8 @@ public class BookController : MonoBehaviour {
 
     void SpawnBook()
     {
-		this.book.gameObject.transform.position = Vector3 (0.78, 8.692, -3.95);
-        Instantiate(this.book);
+		GameObject newBook = book;
+		newBook.gameObject.transform.position = new Vector3(0.78f, 8.692f, -3.95f);
+        Instantiate(newBook);
     }
 }
