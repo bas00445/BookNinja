@@ -453,6 +453,39 @@ ModelImporter:
     4300060: Body
     4300062: Belly
     4300064: Hip
+    6400000: ArmL
+    6400002: ArmR
+    6400004: Belly
+    6400006: Body
+    6400008: FootR
+    6400010: HandL
+    6400012: HandR
+    6400014: Head
+    6400016: HeadRibbonL01
+    6400018: HeadRibbonR01
+    6400020: Hip
+    6400022: HootL
+    6400024: L_HairTail00
+    6400026: L_HairTail01
+    6400028: L_HairTail02
+    6400030: L_HairTail03
+    6400032: L_HairTail04
+    6400034: L_HairTail05
+    6400036: LegL
+    6400038: LegR
+    6400040: Neck
+    6400042: R_HairTail00
+    6400044: R_HairTail01
+    6400046: R_HairTail02
+    6400048: R_HairTail03
+    6400050: R_HairTail04
+    6400052: R_HairTail05
+    6400054: ShoulderL
+    6400056: ShoulderR
+    6400058: UpperArmL
+    6400060: UpperArmR
+    6400062: UpperLegL
+    6400064: UpperLegR
     7400000: Take 001
     9500000: //RootNode
   materials:
@@ -483,8 +516,8 @@ ModelImporter:
   meshes:
     lODScreenPercentages: []
     globalScale: 0.01
-    meshCompression: 0
-    addColliders: 0
+    meshCompression: 2
+    addColliders: 1
     importVisibility: 0
     importBlendShapes: 1
     importCameras: 0

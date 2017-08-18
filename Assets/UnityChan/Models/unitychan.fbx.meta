@@ -367,6 +367,14 @@ ModelImporter:
     4300040: hairband
     4300042: cheek
     4300044: Leg
+    6400000: BLW_DEF
+    6400002: EL_DEF
+    6400004: eye_base_old
+    6400006: EYE_DEF
+    6400008: eye_L_old
+    6400010: eye_R_old
+    6400012: head_back
+    6400014: MTH_DEF
     9500000: //RootNode
     11100000: //RootNode
     13700000: BLW_DEF
@@ -417,7 +425,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 0.01
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importVisibility: 0
     importBlendShapes: 1
     importCameras: 0
@@ -427,7 +435,7 @@ ModelImporter:
     useFileUnits: 1
     optimizeMeshForGPU: 1
     keepQuads: 0
-    weldVertices: 1
+    weldVertices: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88

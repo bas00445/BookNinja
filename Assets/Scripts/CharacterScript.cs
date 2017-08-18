@@ -13,4 +13,15 @@ public class CharacterScript : MonoBehaviour {
 	void Update () {
 		
 	}
+
+    private void OnCollisionEnter(Collision col)
+    {
+        if (col.gameObject.tag == "BookTag")
+        {
+            Destroy(col.gameObject);
+            Debug.Log("Remove Book");
+        }
+    }
+
+    
 }
