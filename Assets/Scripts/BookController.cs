@@ -20,7 +20,7 @@ public class BookController : MonoBehaviour {
     void SpawnBook()
     {
 		float xAxis = Random.Range (-2.5f, 2.5f);
-		float zAxis = Random.Range (-2.5f, -5f);
+		float zAxis = Random.Range (-2.5f, -4f);
 		book.gameObject.transform.position = new Vector3(xAxis, 7f, zAxis);
 		Instantiate(book);
     }
