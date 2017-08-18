@@ -19,8 +19,9 @@ public class BookController : MonoBehaviour {
 
     void SpawnBook()
     {
-		GameObject newBook = book;
-		newBook.gameObject.transform.position = new Vector3(0.78f, 8.692f, -3.95f);
-        Instantiate(newBook);
+		float xAxis = Random.Range (-2.5f, 2.5f);
+		float zAxis = Random.Range (-2.5f, -5f);
+		book.gameObject.transform.position = new Vector3(xAxis, 7f, zAxis);
+		Instantiate(book);
     }
 }
