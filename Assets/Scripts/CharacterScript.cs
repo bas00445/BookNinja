@@ -18,10 +18,9 @@ public class CharacterScript : MonoBehaviour {
     {
         if (col.gameObject.tag == "BookTag")
         {
-            Destroy(col.gameObject);
+            Destroy(col.gameObject); // Remove the book when hand/foot touch with the book
             Debug.Log("Remove Book");
         }
     }
-
-    
+		
 }
