@@ -6,6 +6,7 @@ public class BookMotion : MonoBehaviour {
 	
 	private bool isRotate;
 	private Rigidbody bookRb;
+	private Animator animator;
 
 	public float thrust; 
 
@@ -13,6 +14,7 @@ public class BookMotion : MonoBehaviour {
 	void Start () {
 		this.isRotate = true;
 		this.bookRb = GetComponent<Rigidbody> ();
+		this.animator = GetComponent<Animator> ();
 
 		int side = Random.Range (1, 3);
 		float zAxis = Random.Range (-2.5f, -3.7f);
@@ -30,10 +32,7 @@ public class BookMotion : MonoBehaviour {
 			this.transform.position = new Vector3(xAxis, 1f, zAxis);
 			this.bookRb.AddForce (-this.thrust / 3, this.thrust, 0, ForceMode.Acceleration);
 		}
-
-
-	
-
+			
 	}
 	
 	// Update is called once per frame
@@ -59,6 +58,7 @@ public class BookMotion : MonoBehaviour {
 	}
 
 	void RemoveBook() {
-		Destroy (this.gameObject); // Remove this object from the game
+		this.animator.SetTrigger ("isFloor");
+		Destroy (this.gameObject, 0.8f); // Remove this object from the game
 	}
 }

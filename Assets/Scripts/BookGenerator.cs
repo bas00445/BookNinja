@@ -7,11 +7,6 @@ public class BookGenerator : MonoBehaviour {
 	public GameObject book;
 	public float spawnTime;
 
-	void Awake() {
-		QualitySettings.vSyncCount = 0;
-		Application.targetFrameRate = 60;
-	}
-
 	// Use this for initialization
 	void Start () {
 		// Call target function every 3 seconds

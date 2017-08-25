@@ -131,7 +131,7 @@ public class KinectManager : MonoBehaviour
 	
 	// List of Gesture Listeners. They must implement KinectGestures.GestureListenerInterface
 	public List<KinectGestures.GestureListenerInterface> gestureListeners;
-	
+
 	
 	// returns the single KinectManager instance
     public static KinectManager Instance
@@ -621,7 +621,6 @@ public class KinectManager : MonoBehaviour
 	void Awake() 
 	{
 		//CalibrationText = GameObject.Find("CalibrationText");
-		
 		try
 		{
 			if(KinectWrapper.CheckOpenNIPresence())

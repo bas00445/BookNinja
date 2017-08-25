@@ -24,9 +24,10 @@ GameObject:
   - component: {fileID: 54153598629652814}
   - component: {fileID: 65757119444366662}
   - component: {fileID: 114956475168901074}
+  - component: {fileID: 95850606580998210}
   m_Layer: 0
   m_Name: BookT1
-  m_TagString: Untagged
+  m_TagString: BookTag
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -38,8 +39,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1284022223039192}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.4302993, y: 1, z: -2.6330333}
-  m_LocalScale: {x: 3.4578886, y: 3.4578893, z: 3.4578893}
+  m_LocalPosition: {x: -2.430299, y: 0.99399, z: -2.633033}
+  m_LocalScale: {x: 2.2514024, y: 3.571147, z: 3.571147}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -110,6 +111,23 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.016223345, y: 0.106, z: 0.072}
   m_Center: {x: 0, y: 0.053, z: 0}
+--- !u!95 &95850606580998210
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1284022223039192}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 20df926b4a7156b4ab5eb5d7d6c8f415, type: 2}
+  m_CullingMode: 2
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114956475168901074
 MonoBehaviour:
   m_ObjectHideFlags: 1
