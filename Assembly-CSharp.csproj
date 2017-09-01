@@ -83,9 +83,12 @@
      <None Include="Assets\Resources\OpenNI.ini.txt" />
      <None Include="Assets\Resources\NiTE.ini.txt" />
      <None Include="Assets\UnityChan\license.txt" />
+     <None Include="Assets\Sprite\gameicons\license.txt" />
      <None Include="Assets\Fantasy Skybox FREE\Fog and Ambient reference.txt" />
+     <None Include="Assets\Sprite\gameicons\Spritesheet\sheet_white1x.xml" />
      <None Include="Assets\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_fuku_ds.shader" />
      <None Include="Assets\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_eye_blend.shader" />
+     <None Include="Assets\Sprite\gameicons\Spritesheet\sheet_black2x.xml" />
      <None Include="Assets\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_hair_ds.shader" />
      <None Include="Assets\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_akarami_blend.shader" />
      <None Include="Assets\Sprite\UI-packs\Spritesheet\greySheet.xml" />
@@ -93,6 +96,8 @@
      <None Include="Assets\UnityChan\Stage\Shader\AlphaMask.shader" />
      <None Include="Assets\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_eyelash_blend.shader" />
      <None Include="Assets\Sprite\UI-packs\Spritesheet\yellowSheet.xml" />
+     <None Include="Assets\Sprite\gameicons\Spritesheet\sheet_black1x.xml" />
+     <None Include="Assets\Sprite\gameicons\Spritesheet\sheet_white2x.xml" />
      <None Include="Assets\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_hada.shader" />
      <None Include="Assets\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_hada_blend.shader" />
      <None Include="Assets\Sprite\UI-packs\license.txt" />
