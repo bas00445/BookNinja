@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - BookTag
+  - FruitTag
   layers:
   - Default
   - TransparentFX

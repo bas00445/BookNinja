@@ -16,10 +16,18 @@ public class CharacterScript : MonoBehaviour {
 
     private void OnCollisionEnter(Collision col)
     {
-        if (col.gameObject.tag == "BookTag")
+        if (col.gameObject.tag == "FruitTag")
         {
             Destroy(col.gameObject); // Remove the book when hand/foot touch with the book
-			this.gameController.score += 1;
+            string fruitType = col.gameObject.GetComponent<FruitMotion>().fruitType;
+            
+            if(fruitType == "carrot") { this.gameController.score += 100; }
+            if(fruitType == "corn") { this.gameController.score += 300; }
+            if(fruitType == "eggPlant") { this.gameController.score += 200; }
+            if(fruitType == "pumpkin") { this.gameController.score += 300; }
+            if(fruitType == "tomato") { this.gameController.score += 200; }
+            if(fruitType == "turnip") { this.gameController.score += 50; }
+
         }
     }
 		

@@ -62,9 +62,9 @@
      <Compile Include="Assets\KinectScripts\Samples\MouseControl.cs" />
      <Compile Include="Assets\KinectScripts\Samples\SetSceneAvatars.cs" />
      <Compile Include="Assets\KinectScripts\Samples\SimpleGestureListener.cs" />
-     <Compile Include="Assets\Scripts\BookGenerator.cs" />
-     <Compile Include="Assets\Scripts\BookMotion.cs" />
      <Compile Include="Assets\Scripts\CharacterScript.cs" />
+     <Compile Include="Assets\Scripts\FruitGenerator.cs" />
+     <Compile Include="Assets\Scripts\FruitMotion.cs" />
      <Compile Include="Assets\Scripts\GameController.cs" />
      <Compile Include="Assets\Scripts\MenuController.cs" />
      <Compile Include="Assets\Scripts\MouseController.cs" />
@@ -101,7 +101,7 @@
      <None Include="Assets\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_hada.shader" />
      <None Include="Assets\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_hada_blend.shader" />
      <None Include="Assets\Sprite\UI-packs\license.txt" />
-     <None Include="Assets\Cartoon_Farm_Crops\README.txt" />
+     <None Include="Assets\Prefabs\Fruit-Prefabs\README.txt" />
      <None Include="Assets\Sprite\UI-packs\Spritesheet\blueSheet.xml" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
