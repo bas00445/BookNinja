@@ -27,7 +27,7 @@ public class MenuController : MonoBehaviour {
 		if (mode == "single") {
 			this.ShowLevelMenu ();
 		} else if (mode == "multiplayer") {
-			Application.LoadLevel (1); // Load in-game scene
+			Application.LoadLevel (0); // Load in-game scene
 		}
 	}
 
@@ -35,7 +35,7 @@ public class MenuController : MonoBehaviour {
 		this.currentGameLevel = level;
 		Debug.Log ("Level:" + level);
 
-		Application.LoadLevel (1); // Load in-game scene
+		Application.LoadLevel (0); // Load in-game scene
 	}
 		
 	public void ShowLevelMenu() {

@@ -9,6 +9,7 @@ using System.Runtime.InteropServices;
 
 public class MouseControl : MonoBehaviour 
 {
+
     // Import function mouse_event() from WinApi
     [DllImport("User32.dll")] 
     private static extern void mouse_event(MouseFlags dwFlags, int dx, int dy, int dwData, System.UIntPtr dwExtraInfo);
@@ -26,6 +27,8 @@ public class MouseControl : MonoBehaviour
                 
     public static int MouseXSpeedCoef = 45000; // Cursor rate in Х direction
     public static int MouseYSpeedCoef = 45000; // Cursor rate in Y direction
+    public static float mouseX;
+    public static float mouseY;
 
     // Public function to move the mouse cursor to the specified position
     public static void MouseMove(Vector3 screenCoordinates)
@@ -34,6 +37,9 @@ public class MouseControl : MonoBehaviour
 		
         mouseCoords.x = screenCoordinates.x * 65535;
         mouseCoords.y = (1.0f - screenCoordinates.y) * 65535;
+
+        mouseX = mouseCoords.x;
+        mouseY = mouseCoords.y;
 		
         mouse_event(MouseFlags.Absolute | MouseFlags.Move, (int)mouseCoords.x, (int)mouseCoords.y, 0, System.UIntPtr.Zero);
     }

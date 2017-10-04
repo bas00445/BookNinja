@@ -5,7 +5,8 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using System.IO;
-using System.Text; 
+using System.Text;
+using UnityEngine.UI;
 
 public class KinectManager : MonoBehaviour
 {
@@ -71,9 +72,12 @@ public class KinectManager : MonoBehaviour
 	
 	// GUI Text to show messages.
 	public GameObject CalibrationText;
-	
-	// GUI Texture to display the hand cursor for Player1
-	public GameObject HandCursor1;
+
+    // GUI Text to show mouse position.
+    public Text MousePositionText;
+
+    // GUI Texture to display the hand cursor for Player1
+    public GameObject HandCursor1;
 	
 	// GUI Texture to display the hand cursor for Player2
 	public GameObject HandCursor2;
@@ -905,7 +909,10 @@ public class KinectManager : MonoBehaviour
 				// Check for complete gestures
 				foreach(KinectGestures.GestureData gestureData in player1Gestures)
 				{
-					if(gestureData.complete)
+                    Vector2 mousePos = gestureData.screenPos;
+                    MousePositionText.text = mousePos.x.ToString() + ", " + mousePos.y.ToString();
+
+                    if (gestureData.complete)
 					{
 						if(gestureData.gesture == KinectGestures.Gestures.Click)
 						{
@@ -948,7 +955,7 @@ public class KinectManager : MonoBehaviour
 							
 							if(ControlMouseCursor)
 							{
-								MouseControl.MouseMove(gestureData.screenPos);
+                                MouseControl.MouseMove(gestureData.screenPos);
 							}
 						}
 			
