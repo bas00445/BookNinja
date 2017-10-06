@@ -10,6 +10,8 @@ public class GameController : MonoBehaviour {
 	public int score; // Global score to display
     public float deltaTime;
 
+    public bool isGameStart = false;
+
     // Use this for initialization
     void Start () {
 		this.score = 0;

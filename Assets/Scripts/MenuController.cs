@@ -7,8 +7,11 @@ public class MenuController : MonoBehaviour {
 
 	private string currentGameMode;
 	private string currentGameLevel;
+    public GameObject Menu;
 	public GameObject MainMenu;
 	public GameObject LevelMenu;
+
+    public GameController gameController;
 
 	// Use this for initialization
 	void Start () {
@@ -35,7 +38,9 @@ public class MenuController : MonoBehaviour {
 		this.currentGameLevel = level;
 		Debug.Log ("Level:" + level);
 
-		Application.LoadLevel (0); // Load in-game scene
+        this.Menu.SetActive(false);
+        this.gameController.isGameStart = true;
+
 	}
 		
 	public void ShowLevelMenu() {
