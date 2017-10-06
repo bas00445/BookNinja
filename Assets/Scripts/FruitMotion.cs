@@ -9,6 +9,8 @@ public class FruitMotion : MonoBehaviour {
 	private Animator animator;
 
 	public float thrust;
+    public float minDistance = -3.6f;
+    public float maxDistance = -4.5f;
     public string fruitType;
 
 	// Use this for initialization	
@@ -18,7 +20,7 @@ public class FruitMotion : MonoBehaviour {
 		this.animator = GetComponent<Animator> ();
 
 		int side = Random.Range (1, 3);
-		float zAxis = Random.Range (-2.5f, -3.7f);
+		float zAxis = Random.Range (minDistance, maxDistance);
 
 		if (side == 1) {
 			float xAxis = Random.Range (-2.5f, 0f);
