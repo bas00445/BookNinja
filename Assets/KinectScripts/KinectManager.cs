@@ -74,7 +74,7 @@ public class KinectManager : MonoBehaviour
 	public GameObject CalibrationText;
 
     // GUI Text to show mouse position.
-    public Text MousePositionText;
+    public Text DebugText;
 
     // GUI Texture to display the hand cursor for Player1
     public GameObject HandCursor1;
@@ -909,9 +909,6 @@ public class KinectManager : MonoBehaviour
 				// Check for complete gestures
 				foreach(KinectGestures.GestureData gestureData in player1Gestures)
 				{
-                    Vector2 mousePos = gestureData.screenPos;
-                    MousePositionText.text = mousePos.x.ToString() + ", " + mousePos.y.ToString();
-
                     if (gestureData.complete)
 					{
 						if(gestureData.gesture == KinectGestures.Gestures.Click)
@@ -950,13 +947,14 @@ public class KinectManager : MonoBehaviour
 						{
 							if(HandCursor1 != null)
 							{
-								HandCursor1.transform.position = Vector3.Lerp(HandCursor1.transform.position, gestureData.screenPos, 3 * Time.deltaTime);
-							}
+                                HandCursor1.transform.position = Vector3.Lerp(HandCursor1.transform.position, gestureData.screenPos, 3 * Time.deltaTime);
+                                MouseControl.MouseMove(HandCursor1.transform.position);
+                            }
 							
-							if(ControlMouseCursor)
-							{
-                                MouseControl.MouseMove(gestureData.screenPos);
-							}
+							//if(ControlMouseCursor)
+							//{
+       //                         MouseControl.MouseMove(gestureData.screenPos);
+       //                     }
 						}
 			
 						foreach(KinectGestures.GestureListenerInterface listener in gestureListeners)
