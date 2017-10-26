@@ -8,16 +8,21 @@ public class FruitMotion : MonoBehaviour {
 	private Rigidbody bookRb;
 	private Animator animator;
 
+    private GameController gameController;
+
 	public float thrust;
     public float minDistance = -3.6f;
     public float maxDistance = -4.5f;
     public string fruitType;
+
 
 	// Use this for initialization	
 	void Start () {
 		this.isRotate = true;
 		this.bookRb = GetComponent<Rigidbody> ();
 		this.animator = GetComponent<Animator> ();
+        this.gameController = GameObject.Find("GameController").GetComponent<GameController>();
+
 
         Physics.gravity = new Vector3(0, -0.9f, 0);
 
@@ -63,7 +68,8 @@ public class FruitMotion : MonoBehaviour {
 		if (col.gameObject.name == "Terrain")
 		{
 			this.isRotate = false;
-			Invoke ("RemoveFruit", 4f); // Call RemoveBook funtion after 2 seconds
+            this.gameController.combo = 1;
+			Invoke ("RemoveFruit", 2f); // Call RemoveBook funtion after 2 seconds
 		}
 	}
 

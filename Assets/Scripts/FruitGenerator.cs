@@ -10,7 +10,6 @@ public class FruitGenerator : MonoBehaviour {
 	public GameObject pumpkin;
 	public GameObject tomato;
     public GameObject turnip;
-    public GameObject fruitCollector;
 	public float spawnFreq;
 
     public GameController gameController;

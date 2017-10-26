@@ -28,6 +28,7 @@ public class CharacterScript : MonoBehaviour {
             if(fruitType == "tomato") { this.gameController.score += 200; }
             if(fruitType == "turnip") { this.gameController.score += 50; }
 
+            this.gameController.combo += 1;
         }
     }
 		
