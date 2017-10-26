@@ -40,7 +40,6 @@ public class MenuController : MonoBehaviour {
 
         this.Menu.SetActive(false);
         this.gameController.isGameStart = true;
-
 	}
 		
 	public void ShowLevelMenu() {

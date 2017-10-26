@@ -19,6 +19,9 @@ public class GameController : MonoBehaviour {
 		this.score = 0;
         this.combo = 1;
         this.timeLeft = 90;
+        this.scoreText.text = "";
+        this.comboText.text = "";
+        this.timeLeftText.text = "";
 	}
 	
 	// Update is called once per frame
