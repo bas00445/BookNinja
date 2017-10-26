@@ -141,5 +141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28a46d684056cd14da24b6184d2ffd82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thrust: 300
+  thrust: 100
+  minDistance: -3.6
+  maxDistance: -4.5
   fruitType: eggPlant

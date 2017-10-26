@@ -19,6 +19,8 @@ public class FruitMotion : MonoBehaviour {
 		this.bookRb = GetComponent<Rigidbody> ();
 		this.animator = GetComponent<Animator> ();
 
+        Physics.gravity = new Vector3(0, -0.9f, 0);
+
 		int side = Random.Range (1, 3);
 		float zAxis = Random.Range (minDistance, maxDistance);
 
