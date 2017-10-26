@@ -44,9 +44,14 @@ public class FruitMotion : MonoBehaviour {
 	void Update () {
 		// Rotate the book while floating
 		if (this.isRotate == true) {
-			transform.Rotate (Time.deltaTime * 50, Time.deltaTime * 50, Time.deltaTime * 50);
+			this.transform.Rotate (Time.deltaTime * 50, Time.deltaTime * 50, Time.deltaTime * 50);
 			// deltaTime = Current time started when this object is initialized
-		}
+
+            if (this.transform.position.y > 3.15) // The fruits reach to the highest pont
+            {
+                Physics.gravity = new Vector3(0, -1.5f, 0);
+            }
+        }
 	}
 
 	void FixedUpdate() {
