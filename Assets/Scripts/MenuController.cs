@@ -10,6 +10,7 @@ public class MenuController : MonoBehaviour {
     public GameObject Menu;
 	public GameObject MainMenu;
 	public GameObject LevelMenu;
+    public GameObject GameoverMenu;
 
     public GameController gameController;
 
@@ -55,5 +56,15 @@ public class MenuController : MonoBehaviour {
 		this.MainMenu.SetActive (true);
 		this.LevelMenu.SetActive (false);
 	}
-		
+
+    public void ShowGameoverMenu()
+    {
+        this.GameoverMenu.SetActive(true);
+    }
+
+    public void RestartGame()
+    {
+        Application.LoadLevel(0); 
+    }
+
 }
