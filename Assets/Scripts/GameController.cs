@@ -8,6 +8,7 @@ public class GameController : MonoBehaviour {
 	public Text scoreText;
     public Text comboText;
     public Text timeLeftText;
+    public GameObject comboBar;
 
     public MenuController menuController;
 
