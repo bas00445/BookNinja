@@ -3620,7 +3620,8 @@ MonoBehaviour:
   scoreText: {fileID: 1066937115}
   comboText: {fileID: 1246958156}
   timeLeftText: {fileID: 1219070486}
-  comboBar: {fileID: 874340176}
+  comboBar: {fileID: 1180281882}
+  innerComboBar: {fileID: 874340176}
   menuController: {fileID: 2069304165}
   score: 0
   combo: 1
@@ -7474,7 +7475,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1180281883
 RectTransform:
   m_ObjectHideFlags: 0

@@ -5,6 +5,7 @@ using UnityEngine;
 public class FruitMotion : MonoBehaviour {
 	
 	private bool isRotate;
+    private bool hitFloor;
 	private Rigidbody bookRb;
 	private Animator animator;
 
@@ -18,6 +19,7 @@ public class FruitMotion : MonoBehaviour {
 
 	// Use this for initialization	
 	void Start () {
+        this.hitFloor = false;
 		this.isRotate = true;
 		this.bookRb = GetComponent<Rigidbody> ();
 		this.animator = GetComponent<Animator> ();
@@ -59,16 +61,19 @@ public class FruitMotion : MonoBehaviour {
         }
 	}
 
-	void FixedUpdate() {
-		
-	}
+    private void OnTriggerEnter(Collider other)
+    {
+        
+    }
 
-	void OnCollisionEnter(Collision col)
+    void OnCollisionEnter(Collision col)
 	{	
-		if (col.gameObject.name == "Terrain")
+		if (col.gameObject.name == "Terrain" && this.hitFloor == false)
 		{
-			this.isRotate = false;
+            this.hitFloor = true;
+            this.isRotate = false;
             this.gameController.combo = 1;
+            Debug.Log("Terrain");
 			Invoke ("RemoveFruit", 2f); // Call RemoveBook funtion after 2 seconds
 		}
 	}

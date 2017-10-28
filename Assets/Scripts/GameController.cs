@@ -9,9 +9,11 @@ public class GameController : MonoBehaviour {
     public Text comboText;
     public Text timeLeftText;
     public GameObject comboBar;
-    private Animator comboBarAnim;
+    public GameObject innerComboBar;
 
     public MenuController menuController;
+
+    private Animator innerComboBarAnim;
 
 	public int score; // Global score to display
     public int combo;
@@ -28,28 +30,41 @@ public class GameController : MonoBehaviour {
         this.scoreText.text = "";
         this.comboText.text = "";
         this.timeLeftText.text = "";
-        this.comboBarAnim = this.comboBar.GetComponent<Animator>();
-        this.comboBarAnim.SetTrigger("isReduceCombo");
+
+        this.innerComboBarAnim = this.innerComboBar.GetComponent<Animator>();
+        this.innerComboBarAnim.SetTrigger("isReduceCombo");
     }
 
     void GameOver() {
         this.isGameStart = false;
+    }
+
+    void ComboBarController()
+    {
+        if(this.combo >= 1) {
+            if (Input.GetMouseButtonDown(0))
+            {
+                this.combo += 1;
+                this.innerComboBarAnim.SetTrigger("isNewCombo");
+
+            }
+        } 
+
+        this.comboText.text = "x" + this.combo.ToString();
     }
 	
 	// Update is called once per frame
 	void Update () {
         if (this.isGameStart)
         {
-
+            this.comboBar.SetActive(true);
             if (this.timeLeft >= 0)
             {
-                if(Input.GetMouseButtonDown(0)) { 
-                    this.comboBarAnim.SetTrigger("isNewCombo");
-                }
+                this.ComboBarController();
                 this.timeLeft -= Time.deltaTime;
                 this.timeLeftText.text = "Time Left: " + ((int)(this.timeLeft)).ToString();
                 this.scoreText.text = "Score: " + this.score.ToString();
-                this.comboText.text = "x" + this.combo.ToString();
+                
 
             } else
             {
