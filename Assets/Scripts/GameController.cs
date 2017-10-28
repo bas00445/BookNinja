@@ -26,13 +26,12 @@ public class GameController : MonoBehaviour {
     void Start () {
 		this.score = 0;
         this.combo = 1;
-        this.timeLeft = 15;
+        this.timeLeft = 90;
         this.scoreText.text = "";
         this.comboText.text = "";
         this.timeLeftText.text = "";
 
         this.innerComboBarAnim = this.innerComboBar.GetComponent<Animator>();
-        this.innerComboBarAnim.SetTrigger("isReduceCombo");
     }
 
     void GameOver() {
@@ -41,15 +40,21 @@ public class GameController : MonoBehaviour {
 
     void ComboBarController()
     {
-        if(this.combo >= 1) {
-            if (Input.GetMouseButtonDown(0))
-            {
-                this.combo += 1;
-                this.innerComboBarAnim.SetTrigger("isNewCombo");
+        if (Input.GetMouseButtonDown(0))
+        {
+            this.combo += 1;
+            this.innerComboBarAnim.SetTrigger("isNewCombo");
 
-            }
-        } 
+        }
+        
+        this.comboBar.SetActive(true);
+        this.innerComboBarAnim.SetTrigger("isReduceCombo");
 
+        if (this.innerComboBar.GetComponent<RectTransform>().rect.width <= 5)
+        {
+            this.combo = 1;
+        }
+        
         this.comboText.text = "x" + this.combo.ToString();
     }
 	
@@ -57,7 +62,6 @@ public class GameController : MonoBehaviour {
 	void Update () {
         if (this.isGameStart)
         {
-            this.comboBar.SetActive(true);
             if (this.timeLeft >= 0)
             {
                 this.ComboBarController();

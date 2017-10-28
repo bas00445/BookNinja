@@ -73,7 +73,6 @@ public class FruitMotion : MonoBehaviour {
             this.hitFloor = true;
             this.isRotate = false;
             this.gameController.combo = 1;
-            Debug.Log("Terrain");
 			Invoke ("RemoveFruit", 2f); // Call RemoveBook funtion after 2 seconds
 		}
 	}
