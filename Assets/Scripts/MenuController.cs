@@ -39,11 +39,19 @@ public class MenuController : MonoBehaviour {
 		this.currentGameLevel = level;
 		Debug.Log ("Level:" + level);
 
+        this.Menu.GetComponent<Animator>().SetTrigger("isSelectedLevel");
+
+        Invoke("StartGame", 1.5f);
+
+	}
+
+    public void StartGame()
+    {
         this.Menu.SetActive(false);
         this.gameController.isGameStart = true;
-	}
-		
-	public void ShowLevelMenu() {
+    }
+
+    public void ShowLevelMenu() {
 		this.MainMenu.SetActive (false);
 		this.LevelMenu.SetActive (true);
 	}
