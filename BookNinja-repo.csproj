@@ -105,7 +105,6 @@
   <ItemGroup>
     <None Include="Assets\Fantasy Skybox FREE\Fog and Ambient reference.txt" />
     <None Include="Assets\Fantasy Skybox FREE\Readme.txt" />
-    <None Include="Assets\Fonts\license.txt" />
     <None Include="Assets\Prefabs\Fruit-Prefabs\README.txt" />
     <None Include="Assets\Resources\NiTE.ini.txt" />
     <None Include="Assets\Resources\OpenNI.ini.txt" />
