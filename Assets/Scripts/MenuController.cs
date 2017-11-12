@@ -11,6 +11,7 @@ public class MenuController : MonoBehaviour {
 	public GameObject MainMenu;
 	public GameObject LevelMenu;
     public GameObject GameoverMenu;
+	public GameObject InGameProps;
 
     public GameController gameController;
 
@@ -70,7 +71,19 @@ public class MenuController : MonoBehaviour {
         this.GameoverMenu.SetActive(true);
     }
 
-    public void RestartGame()
+	public void HideGameOverMenu()
+	{
+        this.GameoverMenu.SetActive(false);		
+	}
+
+	public void RestartLevel()
+	{
+		this.gameController.RestartLevel();
+		this.gameController.isGameStart = true;
+		this.HideGameOverMenu();
+	}
+
+    public void NavigateToStartMenu()
     {
         Application.LoadLevel(0); 
     }

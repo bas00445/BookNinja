@@ -26,7 +26,7 @@ public class GameController : MonoBehaviour {
     void Start () {
 		this.score = 0;
         this.combo = 1;
-        this.timeLeft = 90;
+        this.timeLeft = 5;
         this.scoreText.text = "";
         this.comboText.text = "";
         this.timeLeftText.text = "";
@@ -34,8 +34,18 @@ public class GameController : MonoBehaviour {
         this.innerComboBarAnim = this.innerComboBar.GetComponent<Animator>();
     }
 
+    public void RestartLevel() {
+        this.score = 0;
+        this.combo = 1;
+        this.timeLeft = 5;
+        this.scoreText.text = "";
+        this.comboText.text = "";
+        this.timeLeftText.text = "";
+    }
+
     void GameOver() {
         this.isGameStart = false;
+        this.menuController.ShowGameoverMenu();           
     }
 
     void ComboBarController()
@@ -68,12 +78,8 @@ public class GameController : MonoBehaviour {
                 this.timeLeft -= Time.deltaTime;
                 this.timeLeftText.text = "Time Left: " + ((int)(this.timeLeft)).ToString();
                 this.scoreText.text = "Score: " + this.score.ToString();
-                
 
-            } else
-            {
-                Debug.Log("Game Over");
-                this.menuController.ShowGameoverMenu();
+            } else {
                 this.GameOver();
             }
         }
