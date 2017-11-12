@@ -3488,10 +3488,10 @@ MonoBehaviour:
   fruitGenerator: {fileID: 2004122722}
   hitFruit: {fileID: 8300000, guid: 5a1b929f9f531834c9bdea6d6970e07e, type: 3}
   score: 0
-  highestScore: 0
   combo: 1
   playTime: 60
   timeLeft: 90
+  currentGameMode: 
   isGameStart: 0
   isGameOver: 0
 --- !u!4 &548667558
@@ -11398,6 +11398,7 @@ MonoBehaviour:
   LevelMenu: {fileID: 1936117851}
   GameoverMenu: {fileID: 1912452918}
   CurrentScore: {fileID: 641055263}
+  HighestScore: {fileID: 1631733027}
   gameController: {fileID: 548667557}
 --- !u!4 &2069304166
 Transform:

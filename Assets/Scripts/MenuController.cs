@@ -13,12 +13,14 @@ public class MenuController : MonoBehaviour {
 	public GameObject LevelMenu;
     public GameObject GameoverMenu;
 	public Text CurrentScore;
+	public Text HighestScore;
 
     public GameController gameController;
+ 
 
 	// Use this for initialization
 	void Start () {
-		
+
 	}
 	
 	// Update is called once per frame
@@ -27,7 +29,7 @@ public class MenuController : MonoBehaviour {
 	}
 
 	public void SetGameMode(string mode) {
-		this.currentGameMode = mode;  // easy, normal, hard
+		this.gameController.SetGameMode(mode);  // easy, normal, hard
 		Debug.Log ("Mode:" + mode);
 
 		if (mode == "single") {
@@ -67,7 +69,9 @@ public class MenuController : MonoBehaviour {
 
     public void ShowGameoverMenu()
     {
+        int highestScore = PlayerPrefs.GetInt(this.gameController.currentGameMode, 0);
 		this.CurrentScore.text = "Score: " + this.gameController.score;
+        this.HighestScore.text = "Highest: " + highestScore;
         this.GameoverMenu.SetActive(true);
     }
 

@@ -10,7 +10,7 @@ public class GameController : MonoBehaviour {
     public Text timeLeftText;
     public GameObject comboBar;
     public GameObject innerComboBar;
-
+ 
     public MenuController menuController;
     public FruitGenerator fruitGenerator;
     public AudioClip hitFruit;
@@ -19,19 +19,22 @@ public class GameController : MonoBehaviour {
     private AudioSource audioSource;
 
 	public int score; // Global score to display
-	public int highestScore; // Global score to display
     public int combo;
-    public float playTime = 60;
+
     public float timeLeft;
+
+    public string currentGameMode;
 
     public bool isGameStart = false;
     public bool isGameOver = false;
+
+    private int highestScore;
 
     // Use this for initialization
     void Start () {
 		this.score = 0;
         this.combo = 1;
-        this.timeLeft = this.playTime;
+        this.timeLeft = 60;
         this.scoreText.text = "";
         this.comboText.text = "";
         this.timeLeftText.text = "";
@@ -43,13 +46,17 @@ public class GameController : MonoBehaviour {
     public void RestartLevel() {
         this.score = 0;
         this.combo = 1;
-        this.timeLeft = this.playTime;
+        this.timeLeft = 60;
         this.scoreText.text = "";
         this.comboText.text = "";
         this.timeLeftText.text = "";
     }
 
     void GameOver() {
+        if(this.score > this.highestScore)
+        {
+            PlayerPrefs.SetInt(this.currentGameMode, this.score);
+        }
         this.isGameStart = false;
         this.scoreText.text = "";
         this.comboText.text = "";
@@ -81,6 +88,12 @@ public class GameController : MonoBehaviour {
 
     public void PlayHitFruitSound() {
         this.audioSource.PlayOneShot(this.hitFruit);
+    }
+
+    public void SetGameMode(string mode)
+    {
+        this.currentGameMode = mode;
+        this.highestScore = PlayerPrefs.GetInt(mode, 0);
     }
 	
 	// Update is called once per frame
