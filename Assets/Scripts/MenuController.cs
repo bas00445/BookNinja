@@ -41,9 +41,7 @@ public class MenuController : MonoBehaviour {
 		Debug.Log ("Level:" + level);
 
         this.Menu.GetComponent<Animator>().SetTrigger("isSelectedLevel");
-
         Invoke("StartGame", 1.5f);
-
 	}
 
     public void StartGame()

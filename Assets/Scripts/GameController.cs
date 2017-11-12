@@ -16,6 +16,7 @@ public class GameController : MonoBehaviour {
     private Animator innerComboBarAnim;
 
 	public int score; // Global score to display
+	public int highestScore; // Global score to display
     public int combo;
     public float timeLeft;
 
@@ -45,6 +46,10 @@ public class GameController : MonoBehaviour {
 
     void GameOver() {
         this.isGameStart = false;
+        this.scoreText.text = "";
+        this.comboText.text = "";
+        this.timeLeftText.text = "";
+        this.comboBar.SetActive(false);
         this.menuController.ShowGameoverMenu();           
     }
 
