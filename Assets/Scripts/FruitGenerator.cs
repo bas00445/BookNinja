@@ -10,8 +10,10 @@ public class FruitGenerator : MonoBehaviour {
 	public GameObject pumpkin;
 	public GameObject tomato;
     public GameObject turnip;
+
 	public float spawnFreq;
 
+    public Transform fruitCollector;
     public GameController gameController;
 
 	// Use this for initialization
@@ -32,13 +34,19 @@ public class FruitGenerator : MonoBehaviour {
             int fruitType = Random.Range(0, 6);
             switch (fruitType)
             {
-                case 0: Instantiate(carrot); break;
-                case 1: Instantiate(corn); break;
-                case 2: Instantiate(eggPlant); break;
-                case 3: Instantiate(pumpkin); break;
-                case 4: Instantiate(tomato); break;
-                case 5: Instantiate(turnip); break;
+                case 0: Instantiate(carrot, fruitCollector); break;
+                case 1: Instantiate(corn, fruitCollector); break;
+                case 2: Instantiate(eggPlant, fruitCollector); break;
+                case 3: Instantiate(pumpkin, fruitCollector); break;
+                case 4: Instantiate(tomato, fruitCollector); break;
+                case 5: Instantiate(turnip, fruitCollector); break;
             }
+        }
+    }
+
+    public void ClearFruits() {
+        foreach(Transform child in fruitCollector){
+            Destroy(child.gameObject);
         }
     }
 

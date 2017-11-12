@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CharacterScript : MonoBehaviour {
 
-	public GameController gameController;
+	public GameController gameController;   
 
 	// Use this for initialization
 	void Start () {
@@ -18,6 +18,8 @@ public class CharacterScript : MonoBehaviour {
     {
         if (col.gameObject.tag == "FruitTag")
         {
+            this.gameController.PlayHitFruitSound();
+            
             Destroy(col.gameObject); // Remove the book when hand/foot touch with the book
             string fruitType = col.gameObject.GetComponent<FruitMotion>().fruitType;
             

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MenuController : MonoBehaviour {
 
@@ -11,7 +12,7 @@ public class MenuController : MonoBehaviour {
 	public GameObject MainMenu;
 	public GameObject LevelMenu;
     public GameObject GameoverMenu;
-	public GameObject InGameProps;
+	public Text CurrentScore;
 
     public GameController gameController;
 
@@ -66,6 +67,7 @@ public class MenuController : MonoBehaviour {
 
     public void ShowGameoverMenu()
     {
+		this.CurrentScore.text = "Score: " + this.gameController.score;
         this.GameoverMenu.SetActive(true);
     }
 

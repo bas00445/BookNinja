@@ -12,12 +12,16 @@ public class GameController : MonoBehaviour {
     public GameObject innerComboBar;
 
     public MenuController menuController;
+    public FruitGenerator fruitGenerator;
+    public AudioClip hitFruit;
 
     private Animator innerComboBarAnim;
+    private AudioSource audioSource;
 
 	public int score; // Global score to display
 	public int highestScore; // Global score to display
     public int combo;
+    public float playTime = 60;
     public float timeLeft;
 
     public bool isGameStart = false;
@@ -27,18 +31,19 @@ public class GameController : MonoBehaviour {
     void Start () {
 		this.score = 0;
         this.combo = 1;
-        this.timeLeft = 5;
+        this.timeLeft = this.playTime;
         this.scoreText.text = "";
         this.comboText.text = "";
         this.timeLeftText.text = "";
 
         this.innerComboBarAnim = this.innerComboBar.GetComponent<Animator>();
+        this.audioSource = GetComponent<AudioSource>();
     }
 
     public void RestartLevel() {
         this.score = 0;
         this.combo = 1;
-        this.timeLeft = 5;
+        this.timeLeft = this.playTime;
         this.scoreText.text = "";
         this.comboText.text = "";
         this.timeLeftText.text = "";
@@ -50,6 +55,7 @@ public class GameController : MonoBehaviour {
         this.comboText.text = "";
         this.timeLeftText.text = "";
         this.comboBar.SetActive(false);
+        this.fruitGenerator.ClearFruits();
         this.menuController.ShowGameoverMenu();           
     }
 
@@ -71,6 +77,10 @@ public class GameController : MonoBehaviour {
         }
         
         this.comboText.text = "x" + this.combo.ToString();
+    }
+
+    public void PlayHitFruitSound() {
+        this.audioSource.PlayOneShot(this.hitFruit);
     }
 	
 	// Update is called once per frame
