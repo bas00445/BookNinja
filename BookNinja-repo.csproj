@@ -93,6 +93,7 @@
     <Compile Include="Assets\Scripts\FruitGenerator.cs" />
     <Compile Include="Assets\Scripts\FruitMotion.cs" />
     <Compile Include="Assets\Scripts\GameController.cs" />
+    <Compile Include="Assets\Scripts\HitEffect.cs" />
     <Compile Include="Assets\Scripts\MenuController.cs" />
     <Compile Include="Assets\Scripts\MouseController.cs" />
     <Compile Include="Assets\UnityChan\Scripts\CameraController.cs" />

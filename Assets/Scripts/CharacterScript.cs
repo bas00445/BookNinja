@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class CharacterScript : MonoBehaviour {
 
-	public GameController gameController;   
+	public GameController gameController;
+    public Transform hitEffect;
 
 	// Use this for initialization
 	void Start () {
@@ -19,7 +20,8 @@ public class CharacterScript : MonoBehaviour {
         if (col.gameObject.tag == "FruitTag")
         {
             this.gameController.PlayHitFruitSound();
-            
+            this.ShowHitEffect();
+
             Destroy(col.gameObject); // Remove the book when hand/foot touch with the book
             string fruitType = col.gameObject.GetComponent<FruitMotion>().fruitType;
             
@@ -32,6 +34,14 @@ public class CharacterScript : MonoBehaviour {
 
             this.gameController.combo += 1;
         }
+    }
+
+    private void ShowHitEffect()
+    {
+        this.hitEffect.transform.position = new Vector3(this.transform.position.x, 
+                                                        this.transform.position.y,
+                                                        this.transform.position.z - 1);
+        Instantiate(this.hitEffect);
     }
 		
 }
